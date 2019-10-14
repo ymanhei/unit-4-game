@@ -2,8 +2,8 @@ var characters = [{
     id: "captain",
     type: "avenger",
     Name: "Captain America",
-    HP: 100,
-    Att: 10,
+    HP: 120,
+    Att: 12,
     CAtt: 5
 },
 
@@ -11,27 +11,27 @@ var characters = [{
     id: "iron",
     type: "avenger",
     Name: "Ironman",
-    HP: 100,
-    Att: 10,
-    CAtt: 5
+    HP: 130,
+    Att: 13,
+    CAtt: 6
 
 },
 {
     id: "thor",
     type: "avenger",
     Name: "Thor",
-    HP: 100,
-    Att: 10,
-    CAtt: 5
+    HP: 120,
+    Att: 14,
+    CAtt: 7
 
 },
 {
     id: "hulk",
     type: "avenger",
     Name: "Hulk",
-    HP: 100,
-    Att: 10,
-    CAtt: 5
+    HP: 150,
+    Att: 16,
+    CAtt: 8
 
 },
 
@@ -39,32 +39,32 @@ var characters = [{
     id: "thanos",
     type: "villain",
     Name: "Thanos",
-    HP: 150,
+    HP: 180,
     Att: 15,
-    CAtt: 10
+    CAtt: 30
 },
 {
     id: "nebula",
     type: "villain",
     Name: "Nebula",
-    HP: 150,
-    Att: 15,
-    CAtt: 10
+    HP: 100,
+    Att: 10,
+    CAtt: 8
 },
 {
     id: "ultron",
     type: "villain",
     Name: "Ultron",
-    HP: 150,
-    Att: 15,
-    CAtt: 10
+    HP: 130,
+    Att: 13,
+    CAtt: 14
 },
 {
     id: "loki",
     type: "villain",
     Name: "Loki",
-    HP: 150,
-    Att: 15,
+    HP: 110,
+    Att: 13,
     CAtt: 10  
 }
 ]
@@ -77,6 +77,7 @@ var currentaHP = 0;
 var currentvHP = 0;
 var currentAtt = 0;
 var attnum = 0;
+var kills = 0;
 var selected_a = false;
 var selected_v = false;
 var locked_a = false;
@@ -125,6 +126,9 @@ $(".avengers").click(function () {
   })
 
   $("#attackbtn").click(function () {
+      if (attnum == 0) {
+        $("#win-loss").empty();
+      }
       if (selected_a == true && selected_v == true) {
         locked_a = true;
         locked_v = true;
@@ -151,13 +155,17 @@ function getresults (avenger,villain) {
     var v = searchcharacters(villain);
     
 
-    if (attnum == 0) {
+    if (attnum == 0 && kills ==0) {
         currentvHP =v.HP;
         currentaHP = a.HP;
         currentAtt = a.Att;
     }
+    else if (attnum == 0){
+        currentvHP =v.HP;
+    }
     
 console.log(currentvHP);
+console.log(kills);
 
     if (currentvHP > 0 && currentaHP > 0) {
         currentvHP = currentvHP - currentAtt;
@@ -180,6 +188,8 @@ console.log(currentvHP);
         $('#'+v.id).hide();
         locked_v = false;
         attnum = 0;
+        kills++;
+        $("#middle-v").empty();
         
     }
 }

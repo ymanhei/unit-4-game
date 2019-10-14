@@ -1,0 +1,86 @@
+body{
+    background-image: url("../images/bg.jpg");
+    background-size:     cover;            
+    background-repeat:   no-repeat;
+    background-position: center center; 
+   }
+
+   .card-img-top{
+    height: 150px;
+    width: 150px;
+   }
+
+   .card{
+    display: inline-block;
+    width: 200px;
+   }
+   
+   .container{
+
+width: 90%;
+
+   }
+
+   #mpane{
+    height: 100%;
+    display: flex;
+   }
+
+   #mpane_bottom{
+    
+   }
+
+   #questionmark1, #questionmark2{
+    height: 100px;
+    width: 100px;
+   }
+
+   .jumbotron{
+    color: #FFFFFF;
+    background-color: #000000;
+    /*background-color:none !important;*/
+    }
+
+    .flash {
+        animation-name: flash;
+         animation-duration: 0.2s;
+         animation-timing-function: linear;
+         animation-iteration-count: infinite;
+         animation-direction: alternate;
+         animation-play-state: running;
+         font-family: 'Long Cang', cursive;
+     }
+     
+     @keyframes flash {
+         from {color: red;}
+         to {color: black;}
+     }
+
+     #attackbtn {
+        margin: 0 auto;
+         display:none;
+     }
+     
+     .tooltips {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+      }
+      
+      .tooltips .tooltiptexts {
+        visibility: hidden;
+        width: 120px;
+        background-color: red;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+      
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+      }
+      
+      .tooltips:hover .tooltiptexts {
+        visibility: visible;
+      }

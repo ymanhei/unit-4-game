@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Unit-4-Game!</title>
+
+  <!-- We link our html to the Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Long+Cang&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+  
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse" id="avengers">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Unit-4-Game!</a>
+          </div>
+      
+        </div>
+      </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+        
+            <div class="jumbotron border border-danger">
+                <div class="row">
+           
+                    <div class="col-sm-6">
+                <div class="card">
+                    
+                    <div class="card-body tooltips">
+                        <img src="assets/images/captainamerica.gif" class="card-img-top img-thumbnail avengers" alt="Captain America" id="captain">
+                      <p class="card-text tooltiptexts">Captain America</p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    
+                    <div class="card-body tooltips">
+                        <img src="assets/images/ironman.gif" class="card-img-top img-thumbnail avengers" alt="Ironman" id="iron">
+                      <p class="card-text tooltiptexts">Ironman</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card">
+                    
+                    <div class="card-body tooltips">
+                        <img src="assets/images/thor.gif" class="card-img-top img-thumbnail avengers" alt="Thor" id="thor">
+                      <p class="card-text tooltiptexts">Thor</p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    
+                    <div class="card-body tooltips">
+                        <img src="assets/images/hulk.gif" class="card-img-top img-thumbnail avengers" alt="Hulk" id="hulk">
+                      <p class="card-text tooltiptexts">Hulk</p>
+                    </div>
+                  </div>
+                </div>
+   
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-2">
+          <div class="jumbotron" id="mpane_top">
+              <div class="row">
+           
+                  <div class="col-sm">
+              <div class="card">
+                  <img src="assets/images/questionmark.gif" class="card-img-top img-thumbnail qm1" id="questionmark1">
+                  <div class="card-body" id = "middle-a">
+                    
+                  </div>
+                </div>
+
+                <div>
+                    <h1 class="flash">VS</h1>
+                </div>
+
+                <div class="card">
+                  <img src="assets/images/questionmark.gif" class="card-img-top img-thumbnail" id="questionmark2">
+                  <div class="card-body" id = "middle-v">
+                    
+                  </div>
+                </div>
+              </div>
+          
+ 
+            </div>
+        </div>
+        <button type="button" class="btn btn-danger btn-lg" id="attackbtn">Attack!</button>
+
+        
+        </div>
+
+        <div class="col-sm-1"></div>
+
+      <div class="col-sm-4">
+        <div class="jumbotron">
+          <div class="row">
+            
+                    <div class="col-sm-6">
+                <div class="card">
+                    
+                    <div class="card-body tooltips">
+                        <img src="assets/images/loki.gif" class="card-img-top img-thumbnail villains" alt="Loki" id="loki">
+                      <p class="card-text tooltiptexts">Loki</p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    
+                    <div class="card-body tooltips">
+                        <img src="assets/images/ultron.gif" class="card-img-top img-thumbnail villains" alt="Ultron" id="ultron">
+                      <p class="card-text tooltiptexts">Ultron</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card">
+                    
+                    <div class="card-body tooltips">
+                        <img src="assets/images/nebula.gif" class="card-img-top img-thumbnail villains" alt="Nebula" id="nebula">
+                      <p class="card-text tooltiptexts">Nebula</p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    
+                    <div class="card-body tooltips">
+                        <img src="assets/images/thanos.gif" class="card-img-top img-thumbnail villains" alt="Thanos" id="thanos">
+                      <p class="card-text tooltiptexts">Thanos</p>
+                    </div>
+                  </div>
+                </div>
+            
+          </div>
+        </div>
+        </div>
+      </div>
+
+        <div class="row">
+          <div class="col-sm-2">
+
+
+          </div>
+          <div class="col-sm-8">
+              <div class="jumbotron" id="mpane_bottom">
+
+                <div id="results"></div>
+                  <hr class="my-4">
+                  <div id="win-loss"></div>
+
+            </div>
+            
+            </div>
+            <div class="col-sm-2">
+
+            
+              </div>
+            
+        </div>
+
+</div>
+<nav class="navbar fixed-bottom navbar-dark bg-dark border-top border-success">
+    <div class="container">
+
+          <h6 class="text-white align-center">Copyright@Shing Hei Chan</h6>
+
+      </div>
+  </nav>
+
+</body>
+
+</html>

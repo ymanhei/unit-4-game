@@ -164,8 +164,6 @@ function getresults (avenger,villain) {
         currentvHP =v.HP;
     }
     
-console.log(currentvHP);
-console.log(kills);
 
     if (currentvHP > 0 && currentaHP > 0) {
         currentvHP = currentvHP - currentAtt;
@@ -190,11 +188,14 @@ console.log(kills);
         attnum = 0;
         kills++;
         $("#middle-v").empty();
+
+        if (kills == 4) {
+
+            $("#win-loss").html("<br> No more villains. You have saved the world!");
+        }
+        
         
     }
-}
-else {
-
 }
 
 }
